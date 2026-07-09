@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// 商品模型
 const productSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -56,6 +57,7 @@ const productSchema = new mongoose.Schema({
 
 // 搜索索引
 productSchema.index({ title: 'text', description: 'text' });
+
 // 卖家索引 - 加速"我的发布"查询
 productSchema.index({ seller: 1 });
 

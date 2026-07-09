@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
+// 用户模型
 const userSchema = new mongoose.Schema({
   username: {
     type: String,

@@ -9,6 +9,7 @@
 
 const mongoose = require('mongoose');
 
+// 订单模式
 const orderSchema = new mongoose.Schema({
   buyer: {
     type: mongoose.Schema.Types.ObjectId,

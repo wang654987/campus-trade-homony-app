@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// 消息模式
 const messageSchema = new mongoose.Schema({
   conversation: {
     type: mongoose.Schema.Types.ObjectId,

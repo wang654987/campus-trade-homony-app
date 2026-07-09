@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// 收藏模型
 const favoriteSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
