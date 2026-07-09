@@ -1,12 +1,15 @@
 const jwt = require('jsonwebtoken');
 
+// 检查 JWT_SECRET
 if (!process.env.JWT_SECRET) {
   console.error('[FATAL] 环境变量 JWT_SECRET 未配置，服务拒绝启动。请在 .env 中设置强随机密钥。');
   process.exit(1);
 }
 
+// JWT 密钥
 const JWT_SECRET = process.env.JWT_SECRET;
 
+// JWT 验证
 const auth = (req, res, next) => {
   const header = req.header('Authorization');
   if (!header || !header.startsWith('Bearer ')) {
@@ -23,4 +26,7 @@ const auth = (req, res, next) => {
   }
 };
 
+// 导出
 module.exports = { auth, JWT_SECRET };
+
+
